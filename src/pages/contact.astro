@@ -1,0 +1,295 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Great General LLC | Free Estimates on Maui"
+  description="Request a free on-site estimate from Great General LLC — licensed general contractor on Maui. Call (808) 795-4044 or submit a request online. We serve all of Maui."
+  canonical="/contact"
+>
+
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      Contact
+    </nav>
+    <span class="label">Get in Touch</span>
+    <h1>Request a Free On-Site Estimate</h1>
+    <p>Tell us about your project and we'll schedule a free on-site visit anywhere on Maui. General contracting, interior remodeling, or metal fabrication — we'll come to you, walk the scope, and give you a clear written estimate. No charge, no obligation.</p>
+  </div>
+</div>
+
+<section class="section section--white">
+  <div class="container contact-layout">
+
+    <div class="contact-form-col">
+      <h2>Send Us a Message</h2>
+      <p class="contact-intro">Fill out the form below and Noel will be in touch within one business day, usually sooner. Prefer to call or text? Reach Noel directly at <a href="tel:8087954044" class="inline-link">(808) 795-4044</a>.</p>
+
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/contact-success"
+        class="contact-form"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden" aria-hidden="true">
+          <label>Don't fill this out: <input name="bot-field" tabindex="-1" /></label>
+        </p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name <span class="req">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-input"
+              required
+              placeholder="Jane Smith"
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number <span class="req">*</span></label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="form-input"
+              required
+              placeholder="(808) 555-0123"
+              autocomplete="tel"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address <span class="req">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-input"
+            required
+            placeholder="you@example.com"
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="service">Service Needed</label>
+            <select id="service" name="service" class="form-select">
+              <option value="">Select a service...</option>
+              <option value="general-contracting">General Contracting</option>
+              <option value="interior-remodeling">Interior Remodeling</option>
+              <option value="metal-fabrication">Metal Fabrication</option>
+              <option value="multiple">Multiple Services</option>
+              <option value="not-sure">Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="location">Property Location</label>
+            <select id="location" name="location" class="form-select">
+              <option value="">Select area...</option>
+              <option value="kihei">Kihei</option>
+              <option value="wailea">Wailea / Makena</option>
+              <option value="lahaina">Lahaina / West Maui</option>
+              <option value="wailuku">Wailuku</option>
+              <option value="kahului">Kahului</option>
+              <option value="paia">Paia / North Shore</option>
+              <option value="makawao">Makawao / Upcountry</option>
+              <option value="haiku">Haiku</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">Tell Us About Your Project <span class="req">*</span></label>
+          <textarea
+            id="message"
+            name="message"
+            class="form-textarea"
+            required
+            placeholder="Describe what you're looking to do — scope, timeline, any specific requirements. The more detail you can share, the better we can prepare for our on-site visit."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-lg submit-btn">Send Estimate Request</button>
+        <p class="form-note">We respond within one business day. For urgent needs, call or text <a href="tel:8087954044">(808) 795-4044</a> directly.</p>
+      </form>
+    </div>
+
+    <aside class="contact-sidebar">
+      <div class="contact-info-card">
+        <h3>Direct Contact</h3>
+        <div class="contact-method">
+          <div class="contact-method__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <p class="contact-method__label">Call or Text</p>
+            <a href="tel:8087954044" class="contact-method__value">(808) 795-4044</a>
+            <p class="contact-method__note">Reach Noel directly</p>
+          </div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.8"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="contact-method__label">Email</p>
+            <a href="mailto:noel@greatgeneral.com" class="contact-method__value">noel@greatgeneral.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card mt-3">
+        <h4>Free On-Site Estimates</h4>
+        <p style="font-size:14px;">We visit your property anywhere on Maui at no charge. No phone-only guesses — we see the space, understand the scope, and give you a real number.</p>
+      </div>
+
+      <div class="sidebar-card mt-3">
+        <h4>Service Areas</h4>
+        <ul class="area-links">
+          <li><a href="/locations/kihei">Kihei</a></li>
+          <li><a href="/locations/wailea">Wailea</a></li>
+          <li><a href="/locations/lahaina">Lahaina</a></li>
+          <li><a href="/locations/wailuku">Wailuku</a></li>
+          <li><a href="/locations/kahului">Kahului</a></li>
+          <li><a href="/locations/paia">Paia</a></li>
+        </ul>
+        <p style="font-size:13px;color:var(--slate);margin-top:10px;margin-bottom:0;">Also Makawao, Haiku &amp; all of Maui.</p>
+      </div>
+
+      <div class="sidebar-card mt-3">
+        <h4>License</h4>
+        <p style="font-size:14px;">Hawaii DCCA B License (General Building Contractor). Licensed, bonded &amp; insured.</p>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .contact-form-col h2 { margin-bottom: 10px; }
+
+  .contact-intro {
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+  .inline-link { color: var(--navy); font-weight: 600; text-decoration: underline; }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .req { color: var(--gold); }
+
+  .submit-btn { width: 100%; text-align: center; margin-top: 4px; }
+
+  .form-note {
+    font-size: 13px;
+    color: var(--slate);
+    margin-top: 12px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .form-note a { color: var(--navy); font-weight: 600; }
+
+  /* Sidebar */
+  .contact-info-card {
+    background: var(--navy);
+    border-radius: var(--r);
+    padding: 28px;
+    color: var(--white);
+  }
+  .contact-info-card h3 {
+    color: var(--white);
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .contact-method {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 22px;
+  }
+  .contact-method:last-child { margin-bottom: 0; }
+
+  .contact-method__icon {
+    width: 40px; height: 40px;
+    background: rgba(37,99,235,.15);
+    border-radius: var(--r);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    color: var(--gold);
+  }
+
+  .contact-method__label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.55);
+    margin-bottom: 3px;
+  }
+  .contact-method__value {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    margin-bottom: 2px;
+  }
+  .contact-method__value:hover { color: var(--gold); }
+  .contact-method__note {
+    font-size: 13px;
+    color: rgba(255,255,255,.55);
+    margin: 0;
+  }
+
+  .sidebar-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 24px;
+  }
+  .sidebar-card h4 { margin-bottom: 10px; font-size: 16px; }
+
+  .area-links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .area-links a { font-size: 14px; font-weight: 600; color: var(--navy); }
+  .area-links a:hover { color: var(--gold); }
+
+  @media (max-width: 960px) {
+    .contact-layout { grid-template-columns: 1fr; }
+    .contact-sidebar { order: -1; }
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  @media (max-width: 480px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>

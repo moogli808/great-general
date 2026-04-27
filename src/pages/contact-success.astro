@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Estimate Request Received | Great General LLC"
+  description="Your estimate request has been received. Great General LLC will be in touch within one business day to schedule your free on-site visit."
+  canonical="/contact-success"
+  noindex={true}
+>
+
+<section class="success-section">
+  <div class="container">
+    <div class="success-card">
+      <div class="success-icon" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h1>Request Received</h1>
+      <p class="success-lead">Thanks for reaching out to Great General LLC. Noel will review your request and be in touch within one business day — usually much sooner.</p>
+
+      <div class="success-next">
+        <h2>What Happens Next</h2>
+        <div class="next-steps">
+          <div class="next-step">
+            <div class="next-num">1</div>
+            <div>
+              <strong>We'll contact you to schedule your free on-site estimate</strong>
+              <p>Noel will reach out by phone or email to confirm the details of your project and schedule a convenient time to visit your property — anywhere on Maui, at no charge.</p>
+            </div>
+          </div>
+          <div class="next-step">
+            <div class="next-num">2</div>
+            <div>
+              <strong>On-site visit and scope review</strong>
+              <p>During the visit, we'll walk through the space, discuss your goals, and understand the full scope of the project. No high-pressure sales — just a clear look at what the project involves.</p>
+            </div>
+          </div>
+          <div class="next-step">
+            <div class="next-num">3</div>
+            <div>
+              <strong>Written estimate</strong>
+              <p>You'll receive a clear written estimate defining scope and pricing. No vague ballparks — a real number for a defined scope, so you can make an informed decision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="success-contact">
+        <p>Need to reach us sooner? Call or text Noel directly:</p>
+        <a href="tel:8087954044" class="success-phone">(808) 795-4044</a>
+        <a href="mailto:noel@greatgeneral.com" class="success-email">noel@greatgeneral.com</a>
+      </div>
+
+      <div class="success-actions">
+        <a href="/" class="btn btn-navy">Back to Home</a>
+        <a href="/services/general-contracting" class="btn btn-outline-navy">View Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+  .success-section {
+    background: var(--bg);
+    min-height: calc(100vh - 68px - 360px);
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .success-card {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .success-icon {
+    width: 72px; height: 72px;
+    background: rgba(14, 165, 78, .1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 28px;
+    color: #0ea54e;
+  }
+
+  .success-card h1 { margin-bottom: 16px; font-size: clamp(28px, 4vw, 38px); }
+
+  .success-lead {
+    font-size: 18px;
+    color: var(--slate);
+    max-width: 520px;
+    margin: 0 auto 48px;
+  }
+
+  .success-next {
+    text-align: left;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 32px;
+    margin-bottom: 36px;
+  }
+
+  .success-next h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .next-steps { display: flex; flex-direction: column; gap: 24px; }
+
+  .next-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .next-num {
+    width: 32px; height: 32px;
+    background: var(--navy);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .next-step strong {
+    display: block;
+    font-size: 15px;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .next-step p { font-size: 14px; margin: 0; }
+
+  .success-contact {
+    margin-bottom: 36px;
+  }
+  .success-contact p { color: var(--slate); margin-bottom: 12px; }
+
+  .success-phone {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .success-email {
+    display: block;
+    font-size: 15px;
+    color: var(--slate);
+    text-decoration: underline;
+  }
+
+  .success-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline-navy {
+    background: transparent;
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    padding: 14px 28px;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: var(--r);
+    display: inline-block;
+    transition: opacity .15s;
+    text-decoration: none;
+  }
+  .btn-outline-navy:hover { opacity: .75; }
+</style>

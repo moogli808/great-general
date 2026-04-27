@@ -1,17 +1,310 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="General Contractor Maui, Hawaii | Great General LLC"
+  description="Great General LLC is a Hawaii DCCA licensed general contractor serving all of Maui. General contracting, interior remodeling, and metal fabrication. Free on-site estimates. Call (808) 795-4044."
+  canonical="/"
+>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="label">Licensed General Contractor · Maui, Hawaii</span>
+      <h1>One Contractor.<br>Full Accountability.<br><span style="color:var(--gold)">All of Maui.</span></h1>
+      <p class="hero-sub">Great General LLC is a Hawaii DCCA B Licensed general contractor handling full project management, interior remodeling, and custom metal fabrication across every community on Maui — from Kihei and Wailea to Lahaina, Wailuku, Kahului, and Paia.</p>
+      <div class="hero-btns">
+        <a href="/contact" class="btn btn-gold btn-lg">Get a Free Estimate</a>
+        <a href="tel:8087954044" class="btn btn-outline btn-lg">(808) 795-4044</a>
+      </div>
+    </div>
+
+    <div class="trust-bar">
+      <span><strong>Hawaii DCCA B License</strong></span>
+      <span><strong>5+</strong> Years on Maui</span>
+      <span><strong>Free</strong> On-Site Estimates</span>
+      <span>Serving <strong>All of Maui</strong></span>
+      <span>Permits <strong>Handled</strong></span>
+    </div>
+  </div>
+</section>
+
+<!-- ── Services ── -->
+<section class="section section--white">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">What We Do</span>
+      <h2>Three Core Services,<br>Zero Subcontractor Layers</h2>
+      <p>Our Hawaii B License lets us self-perform carpentry, framing, drywall, demolition, and finishing work — meaning your budget goes into the project, not a subcontractor's markup.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18M9 9v12M3 15h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <h3>General Contracting</h3>
+        <p>Full project management from permit application through final inspection. We handle Maui County permits, scope planning, and coordinate every phase of your build — with one point of contact throughout.</p>
+        <ul class="check-list mt-3">
+          <li>Maui County permit handling</li>
+          <li>Scope &amp; budget planning</li>
+          <li>Residential, condo &amp; vacation rental projects</li>
+          <li>Free on-site estimates</li>
+        </ul>
+        <a href="/services/general-contracting" class="service-link">Learn more →</a>
+      </div>
+
+      <div class="card service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="19" cy="18" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <h3>Interior Remodeling</h3>
+        <p>Kitchen remodels, bathroom renovations, interior framing and buildouts, drywall, flooring, carpentry, and selective or full demolition. We do the work ourselves — on your timeline and on budget.</p>
+        <ul class="check-list mt-3">
+          <li>Kitchen &amp; bathroom remodels</li>
+          <li>Interior framing &amp; buildouts</li>
+          <li>Drywall installation &amp; finishing</li>
+          <li>Flooring &amp; custom millwork</li>
+        </ul>
+        <a href="/services/interior-remodeling" class="service-link">Learn more →</a>
+      </div>
+
+      <div class="card service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3h14M5 21h14M3 7l2 14M19 7l2 14M8 7l1 10M15 7l1 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Metal Fabrication</h3>
+        <p>Custom architectural metal installations built for Maui's coastal environment. Gates, railings, fencing systems, and structural metalwork fabricated from corrosion-resistant materials that stand up to salt air and trade winds.</p>
+        <ul class="check-list mt-3">
+          <li>Custom gates &amp; railings</li>
+          <li>Fencing systems</li>
+          <li>Architectural metal installations</li>
+          <li>Coastal salt-air rated materials</li>
+        </ul>
+        <a href="/services/metal-fabrication" class="service-link">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Why Great General ── -->
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Why Great General</span>
+      <h2>Built for Maui. Licensed to Do the Work.</h2>
+      <p>There's a difference between a general contractor who manages subcontractors and one who actually holds the tools. We're the second kind.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="icon-block">
+        <div class="icon-block__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7l9 5 9-5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h4>Hawaii DCCA B License</h4>
+          <p>Our General Building Contractor license lets us self-perform carpentry, framing, drywall, demolition, and more. You pay for the work, not subcontractor overhead.</p>
+        </div>
+      </div>
+
+      <div class="icon-block">
+        <div class="icon-block__icon">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <h4>One Point of Contact</h4>
+          <p>Noel runs every project personally. No layers of project managers or middlemen — your call goes directly to the person doing the work, every time.</p>
+        </div>
+      </div>
+
+      <div class="icon-block">
+        <div class="icon-block__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h4>Permits Handled</h4>
+          <p>We navigate Maui County permitting from application through final inspection sign-off. Permits protect your investment and your property value — we make sure they're done right.</p>
+        </div>
+      </div>
+
+      <div class="icon-block">
+        <div class="icon-block__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="currentColor" stroke-width="1.8"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" stroke-width="1.8"/></svg>
+        </div>
+        <div>
+          <h4>Free On-Site Estimates</h4>
+          <p>We come to you — anywhere on Maui. See the space, understand the scope, and give you a clear estimate before any commitment. No phone-only guesses.</p>
+        </div>
+      </div>
+
+      <div class="icon-block">
+        <div class="icon-block__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.8"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h4>Maui Specialists</h4>
+          <p>Five-plus years building and remodeling on Maui means we understand the unique challenges — coastal salt air, Hawaii building code, Maui County inspectors, and the logistics of island construction.</p>
+        </div>
+      </div>
+
+      <div class="icon-block">
+        <div class="icon-block__icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <h4>Vacation Rentals &amp; Condos</h4>
+          <p>We work with property managers, homeowners, and investors. Whether it's a quick unit refresh or a full renovation between rental seasons, we respect timelines and properties.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How it works ── -->
+<section class="section section--white">
+  <div class="container">
+    <div class="section-header center text-center">
+      <span class="label">The Process</span>
+      <h2>How It Works</h2>
+      <p>Simple, transparent, and built around your project — not a corporate intake process.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step__num">Step 01</div>
+        <h3>Free On-Site Estimate</h3>
+        <p>We visit your property anywhere on Maui, walk the space, and understand the full scope. There's no cost and no obligation. You get a clear picture of what the project involves before committing to anything.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">Step 02</div>
+        <h3>Scope, Permits &amp; Planning</h3>
+        <p>We put together the project scope, handle Maui County permit applications where required, and plan the work sequence to minimize disruption to your home, business, or rental property. You're informed at every stage.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">Step 03</div>
+        <h3>Build &amp; Completion</h3>
+        <p>We do the work — with our own hands and our own crew. No mystery subcontractors showing up unannounced. When the job is done, we walk through the finished project with you and handle the final county inspection sign-off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Service Areas ── -->
+<section class="section section--bg">
+  <div class="container">
+    <div class="section-header center text-center">
+      <span class="label">Service Areas</span>
+      <h2>We Work Across All of Maui</h2>
+      <p>From the luxury resort communities of Wailea to the historic towns of Lahaina and Wailuku, we serve every corner of the island with the same level of care and accountability.</p>
+    </div>
+
+    <div class="area-grid">
+      <div class="area-chip">
+        <a href="/locations/kihei">Kihei</a>
+        <p>South Maui · Condos &amp; Residential</p>
+      </div>
+      <div class="area-chip">
+        <a href="/locations/wailea">Wailea</a>
+        <p>Luxury Resort Community</p>
+      </div>
+      <div class="area-chip">
+        <a href="/locations/lahaina">Lahaina</a>
+        <p>West Maui · Historic Town</p>
+      </div>
+      <div class="area-chip">
+        <a href="/locations/wailuku">Wailuku</a>
+        <p>County Seat · Central Maui</p>
+      </div>
+      <div class="area-chip">
+        <a href="/locations/kahului">Kahului</a>
+        <p>Commercial Hub · Central Maui</p>
+      </div>
+      <div class="area-chip">
+        <a href="/locations/paia">Paia</a>
+        <p>North Shore · Upcountry Gateway</p>
+      </div>
+      <div class="area-chip">
+        <a href="/contact">Makawao</a>
+        <p>Upcountry Maui</p>
+      </div>
+      <div class="area-chip">
+        <a href="/contact">Haiku</a>
+        <p>Rural Upcountry</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-banner">
+  <div class="container">
+    <span class="label" style="color:#93C5FD;">Ready to Start?</span>
+    <h2>Get a Free On-Site Estimate</h2>
+    <p>Tell us about your project and we'll come to you — anywhere on Maui, no charge. General contracting, remodeling, or metal fabrication — we'll give you a straight answer and a clear scope.</p>
+    <div class="btn-group">
+      <a href="/contact" class="btn btn-gold btn-lg">Request an Estimate</a>
+      <a href="tel:8087954044" class="btn btn-outline btn-lg">Call (808) 795-4044</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+  /* ── Hero ── */
+  .hero {
+    background: var(--navy);
+    padding: 96px 0 72px;
+    color: var(--white);
+  }
+  .hero-inner { max-width: var(--max-w); }
+  .hero-content { max-width: 700px; }
+
+  .hero h1 {
+    color: var(--white);
+    margin: 0 0 24px;
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,.78);
+    max-width: 620px;
+    margin-bottom: 36px;
+  }
+  .hero-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* ── Service cards ── */
+  .service-icon {
+    width: 52px; height: 52px;
+    background: rgba(37,99,235,.08);
+    border-radius: var(--r);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--gold);
+  }
+
+  .service-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+  }
+  .service-link:hover { color: var(--gold); }
+
+  /* ── Section bg ── */
+  .section--bg { background: var(--bg); }
+
+  @media (max-width: 700px) {
+    .hero { padding: 64px 0 52px; }
+    .hero-btns { flex-direction: column; }
+    .hero-btns .btn { text-align: center; }
+  }
+</style>
