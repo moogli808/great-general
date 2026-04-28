@@ -22,6 +22,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 </div>
 
 <section class="section section--white">
+  <div class="container">
+    <figure class="project-hero-fig">
+      <img
+        src="/images/gc-project-1.jpg"
+        alt="General contractor Maui luxury oceanfront construction by Great General LLC"
+        loading="lazy"
+        width="1200"
+        height="480"
+      />
+    </figure>
+  </div>
   <div class="container layout-prose">
 
     <div class="prose">
@@ -149,8 +160,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .sidebar-links a { font-size: 15px; font-weight: 600; color: var(--navy); }
   .sidebar-links a:hover { color: var(--gold); }
 
+  .project-hero-fig {
+    margin: 0 0 56px;
+  }
+  .project-hero-fig img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: var(--r);
+  }
   @media (max-width: 960px) {
     .layout-prose { grid-template-columns: 1fr; }
     .service-sidebar { order: -1; }
+    .project-hero-fig img { height: 320px; }
+  }
+  @media (max-width: 560px) {
+    .project-hero-fig img { height: 240px; }
   }
 </style>
