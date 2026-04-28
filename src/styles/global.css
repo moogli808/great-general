@@ -259,6 +259,25 @@ p:last-child { margin-bottom: 0; }
 .loc-sidebar h4 { margin-bottom: 14px; }
 .loc-sidebar .btn { display: block; text-align: center; margin-top: 20px; }
 
+/* ── Photo Cards ── */
+.photo-card {
+  margin: 0;
+}
+.photo-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--r);
+}
+.photo-card figcaption {
+  font-size: 13px;
+  color: var(--slate);
+  padding: 10px 2px 0;
+  line-height: 1.5;
+}
+
 /* ── Utilities ── */
 .text-center { text-align: center; }
 .text-gold  { color: var(--gold) !important; }
