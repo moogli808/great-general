@@ -31,7 +31,8 @@ const { pathname } = Astro.url;
         </div>
       </div>
 
-      <a href="/about" class:list={['nav-link', { active: pathname === '/about' }]}>About</a>
+      <a href="/about"    class:list={['nav-link', { active: pathname === '/about' }]}>About</a>
+      <a href="/gallery"  class:list={['nav-link', { active: pathname === '/gallery' }]}>Gallery</a>
     </nav>
 
     <div class="header-actions">
@@ -64,6 +65,7 @@ const { pathname } = Astro.url;
       ))}
       <div class="mobile-divider"></div>
       <a href="/about"   class="mobile-link">About</a>
+      <a href="/gallery" class="mobile-link">Gallery</a>
       <a href="/contact" class="mobile-link">Contact</a>
       <div class="mobile-divider"></div>
       <a href="tel:8087954044" class="mobile-phone">(808) 795-4044</a>

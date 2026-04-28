@@ -259,6 +259,30 @@ p:last-child { margin-bottom: 0; }
 .loc-sidebar h4 { margin-bottom: 14px; }
 .loc-sidebar .btn { display: block; text-align: center; margin-top: 20px; }
 
+/* ── Project Hero Figure ── */
+.project-hero-fig {
+  margin: 0 0 56px;
+}
+.project-hero-fig img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: var(--r);
+}
+.project-hero-fig figcaption {
+  font-size: 13px;
+  color: var(--slate);
+  padding: 10px 2px 0;
+}
+@media (max-width: 960px) {
+  .project-hero-fig img { height: 320px; }
+}
+@media (max-width: 560px) {
+  .project-hero-fig img { height: 240px; }
+}
+
 /* ── Photo Cards ── */
 .photo-card {
   margin: 0;
