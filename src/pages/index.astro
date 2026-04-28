@@ -177,6 +177,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 </section>
 
+<!-- ── Project Photos ── -->
+<section class="section section--white">
+  <div class="container">
+    <div class="grid-2">
+      <figure class="photo-card">
+        <img
+          src="/images/metal-fab-railing-2.jpg"
+          alt="Custom stainless steel oceanfront railing Maui by Great General LLC"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+        <figcaption>Stainless Steel Railings — Wailea Oceanfront Property</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img
+          src="/images/metal-fab-fence-2.jpg"
+          alt="Custom metal and wood privacy fence Maui by Great General LLC"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+        <figcaption>Custom Metal Fencing — South Maui Residential</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ── How it works ── -->
 <section class="section section--white">
   <div class="container">
@@ -216,23 +244,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="grid-3">
       <figure class="photo-card">
         <img
-          src="/images/metal-fab-hero.jpg"
-          alt="Custom stainless steel pool railings Maui by Great General LLC - oceanfront luxury property"
+          src="/images/metal-fab-railing-1.jpg"
+          alt="Custom stainless steel railing Maui by Great General LLC"
           loading="lazy"
           width="800"
           height="600"
         />
-        <figcaption>Custom Pool Railings — Wailea</figcaption>
+        <figcaption>Custom Railings — Wailea</figcaption>
       </figure>
       <figure class="photo-card">
         <img
           src="/images/metal-fab-gate-1.jpg"
-          alt="Custom metal gate with wood panels Maui"
+          alt="Custom metal gate with wood panels Maui by Great General LLC"
           loading="lazy"
           width="800"
           height="600"
         />
-        <figcaption>Custom Gates &amp; Fencing — Kihei</figcaption>
+        <figcaption>Custom Gate — South Maui</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img
+          src="/images/metal-fab-fence-1.jpg"
+          alt="Custom metal and wood privacy fence Maui by Great General LLC"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+        <figcaption>Custom Fencing — West Maui</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img
+          src="/images/gc-project-1.jpg"
+          alt="General contractor Maui luxury oceanfront construction by Great General LLC"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+        <figcaption>Luxury Construction — Wailea</figcaption>
+      </figure>
+      <figure class="photo-card">
+        <img
+          src="/images/metal-fab-roof.jpg"
+          alt="Metal roof fabrication Maui by Great General LLC"
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+        <figcaption>Metal Roofing — Central Maui</figcaption>
       </figure>
       <figure class="photo-card">
         <img
@@ -282,14 +340,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="/locations/paia">Paia</a>
         <p>North Shore · Upcountry Gateway</p>
       </div>
-      <div class="area-chip">
-        <a href="/contact">Makawao</a>
-        <p>Upcountry Maui</p>
-      </div>
-      <div class="area-chip">
-        <a href="/contact">Haiku</a>
-        <p>Rural Upcountry</p>
-      </div>
     </div>
   </div>
 </section>
@@ -312,11 +362,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <style>
   /* ── Hero ── */
   .hero {
-    background: var(--navy);
-    padding: 96px 0 72px;
+    position: relative;
+    background-image: url('/images/metal-fab-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
     color: var(--white);
+    padding: 96px 0 72px;
   }
-  .hero-inner { max-width: var(--max-w); }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 37, 64, 0.55);
+    z-index: 0;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
   .hero-content { max-width: 700px; }
 
   .hero h1 {
@@ -361,7 +428,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .section--bg { background: var(--bg); }
 
   @media (max-width: 700px) {
-    .hero { padding: 64px 0 52px; }
+    .hero { padding: 64px 0 52px; min-height: 70vh; }
     .hero-btns { flex-direction: column; }
     .hero-btns .btn { text-align: center; }
   }
