@@ -1,5 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import metalFabHero from '../../assets/images/metal-fab-hero.jpg';
+import railing1     from '../../assets/images/metal-fab-railing-1.jpg';
+import railing2     from '../../assets/images/metal-fab-railing-2.jpg';
+import gate1        from '../../assets/images/metal-fab-gate-1.jpg';
+import fence1       from '../../assets/images/metal-fab-fence-1.jpg';
+import roofImg      from '../../assets/images/metal-fab-roof.jpg';
 ---
 
 <BaseLayout
@@ -24,14 +31,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <section class="section section--white">
   <div class="container">
     <figure class="project-hero-fig">
-      <img
-        src="/images/metal-fab-hero.jpg"
+      <Image
+        src={metalFabHero}
         alt="Custom stainless steel pool railings Maui by Great General LLC - oceanfront luxury property"
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        width="1200"
-        height="480"
+        width={1200}
+        height={480}
+        format="webp"
+        quality={80}
       />
     </figure>
   </div>
@@ -161,57 +170,67 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
     <div class="gallery-grid">
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-railing-1.jpg"
+        <Image
+          src={railing1}
           alt="Pool railing installation Maui oceanfront property"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Pool Railing Installation · Oceanfront property, Maui</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-railing-2.jpg"
+        <Image
+          src={railing2}
           alt="Metal fabrication Maui luxury pool railing"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Custom Pool Railing · Luxury coastal property</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-gate-1.jpg"
+        <Image
+          src={gate1}
           alt="Custom metal gate with wood panels Maui"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Custom Gate · Metal frame with wood panels</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-fence-1.jpg"
+        <Image
+          src={fence1}
           alt="Custom metal and wood privacy fence Maui"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Privacy Fence · Custom metal &amp; wood panels</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-roof.jpg"
+        <Image
+          src={roofImg}
           alt="Standing seam metal roof installation Maui oceanfront"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Standing Seam Metal Roof · Oceanfront Maui</figcaption>
       </figure>

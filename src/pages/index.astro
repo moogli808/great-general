@@ -1,5 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image, getImage } from 'astro:assets';
+import heroImg    from '../assets/images/metal-fab-hero.jpg';
+import gcProject1 from '../assets/images/gc-project-1.jpg';
+import img0036    from '../assets/images/IMG_0036.JPG';
+import railing1   from '../assets/images/metal-fab-railing-1.jpg';
+import railing2   from '../assets/images/metal-fab-railing-2.jpg';
+import quonsetImg from '../assets/images/quonset-hut-maui.jpeg';
+import fence1     from '../assets/images/metal-fab-fence-1.jpg';
+import fence2     from '../assets/images/metal-fab-fence-2.jpg';
+import gate1      from '../assets/images/metal-fab-gate-1.jpg';
+import roofImg    from '../assets/images/metal-fab-roof.jpg';
+
+const heroBg = await getImage({ src: heroImg, format: 'webp', quality: 80, width: 1920 });
 
 const pageSchema = JSON.stringify({
   "@context": "https://schema.org",
@@ -27,11 +40,11 @@ const pageSchema = JSON.stringify({
   description="Great General LLC is a Hawaii DCCA licensed general contractor serving all of Maui. General contracting, interior remodeling, and metal fabrication. Free on-site estimates. Call (808) 795-4044."
   canonical="/"
 >
-  <link rel="preload" as="image" href="/images/metal-fab-hero.jpg" slot="head" />
+  <link rel="preload" as="image" href={heroBg.src} slot="head" />
   <script type="application/ld+json" slot="head" set:html={pageSchema}></script>
 
 <!-- ── Hero ── -->
-<section class="hero">
+<section class="hero" style={`background-image:url('${heroBg.src}')`}>
   <div class="container hero-inner">
     <div class="hero-content">
       <span class="label" style="color:rgba(255,255,255,0.85);">Licensed General Contractor · Maui, Hawaii</span>
@@ -65,7 +78,7 @@ const pageSchema = JSON.stringify({
     <div class="grid-2">
       <div class="card service-card">
         <figure class="service-card-photo">
-          <img src="/images/gc-project-1.jpg" alt="General contracting project Maui by Great General LLC" loading="lazy" decoding="async" width="800" height="600" />
+          <Image src={gcProject1} alt="General contracting project Maui by Great General LLC" loading="lazy" decoding="async" width={800} height={600} format="webp" quality={80} />
         </figure>
         <div class="service-card-body">
           <h3>General Contracting</h3>
@@ -82,7 +95,7 @@ const pageSchema = JSON.stringify({
 
       <div class="card service-card">
         <figure class="service-card-photo">
-          <img src="/images/IMG_0036.JPG" alt="Kitchen remodel Maui by Great General LLC" loading="lazy" decoding="async" width="800" height="600" />
+          <Image src={img0036} alt="Kitchen remodel Maui by Great General LLC" loading="lazy" decoding="async" width={800} height={600} format="webp" quality={80} />
         </figure>
         <div class="service-card-body">
           <h3>Interior Remodeling</h3>
@@ -99,7 +112,7 @@ const pageSchema = JSON.stringify({
 
       <div class="card service-card">
         <figure class="service-card-photo">
-          <img src="/images/metal-fab-railing-1.jpg" alt="Custom metal railing Maui by Great General LLC" loading="lazy" decoding="async" width="800" height="600" />
+          <Image src={railing1} alt="Custom metal railing Maui by Great General LLC" loading="lazy" decoding="async" width={800} height={600} format="webp" quality={80} />
         </figure>
         <div class="service-card-body">
           <h3>Metal Fabrication</h3>
@@ -116,7 +129,7 @@ const pageSchema = JSON.stringify({
 
       <div class="card service-card">
         <figure class="service-card-photo">
-          <img src="/images/quonset-hut-maui.jpeg" alt="Quonset hut construction Maui by Great General LLC" loading="lazy" decoding="async" width="800" height="600" />
+          <Image src={quonsetImg} alt="Quonset hut construction Maui by Great General LLC" loading="lazy" decoding="async" width={800} height={600} format="webp" quality={80} />
         </figure>
         <div class="service-card-body">
           <h3>Quonset Hut Construction</h3>
@@ -212,24 +225,28 @@ const pageSchema = JSON.stringify({
   <div class="container">
     <div class="grid-2">
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-railing-2.jpg"
+        <Image
+          src={railing2}
           alt="Custom stainless steel oceanfront railing Maui by Great General LLC"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Stainless Steel Railings — Wailea Oceanfront Property</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-fence-2.jpg"
+        <Image
+          src={fence2}
           alt="Custom metal and wood privacy fence Maui by Great General LLC"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Custom Metal Fencing — South Maui Residential</figcaption>
       </figure>
@@ -275,68 +292,80 @@ const pageSchema = JSON.stringify({
     </div>
     <div class="grid-3">
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-railing-1.jpg"
+        <Image
+          src={railing1}
           alt="Custom stainless steel railing Maui by Great General LLC"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Custom Railings — Wailea</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-gate-1.jpg"
+        <Image
+          src={gate1}
           alt="Custom metal gate with wood panels Maui by Great General LLC"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Custom Gate — South Maui</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-fence-1.jpg"
+        <Image
+          src={fence1}
           alt="Custom metal and wood privacy fence Maui by Great General LLC"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Custom Fencing — West Maui</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/gc-project-1.jpg"
+        <Image
+          src={gcProject1}
           alt="General contractor Maui luxury oceanfront construction by Great General LLC"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Luxury Construction — Wailea</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/metal-fab-roof.jpg"
+        <Image
+          src={roofImg}
           alt="Metal roof fabrication Maui by Great General LLC"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Metal Roofing — Central Maui</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0036.JPG"
+        <Image
+          src={img0036}
           alt="Kitchen remodel Maui by Great General LLC — cherry wood cabinets and granite countertops"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Kitchen Remodel — South Maui</figcaption>
       </figure>
@@ -401,7 +430,6 @@ const pageSchema = JSON.stringify({
   /* ── Hero ── */
   .hero {
     position: relative;
-    background-image: url('/images/metal-fab-hero.jpg');
     background-size: cover;
     background-position: center;
     min-height: 90vh;

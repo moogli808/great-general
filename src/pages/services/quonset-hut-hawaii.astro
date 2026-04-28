@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import quonsetImg from '../../assets/images/quonset-hut-maui.jpeg';
 ---
 
 <BaseLayout
@@ -24,14 +26,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <section class="section section--white">
   <div class="container">
     <figure class="project-hero-fig">
-      <img
-        src="/images/quonset-hut-maui.jpeg"
+      <Image
+        src={quonsetImg}
         alt="Quonset hut construction Maui Hawaii by Great General LLC - agricultural storage building Upcountry Maui"
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        width="1200"
-        height="480"
+        width={1200}
+        height={480}
+        format="webp"
+        quality={80}
       />
     </figure>
   </div>

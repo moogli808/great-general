@@ -1,5 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import img0036 from '../../assets/images/IMG_0036.JPG';
+import img0037 from '../../assets/images/IMG_0037.JPG';
+import img0038 from '../../assets/images/IMG_0038.JPG';
+import img0039 from '../../assets/images/IMG_0039.JPG';
+import img0040 from '../../assets/images/IMG_0040.JPG';
+import img0041 from '../../assets/images/IMG_0041.JPG';
+import img0042 from '../../assets/images/IMG_0042.JPG';
+import img0043 from '../../assets/images/IMG_0043.JPG';
+import img0045 from '../../assets/images/IMG_0045.JPG';
 ---
 
 <BaseLayout
@@ -24,14 +34,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <section class="section section--white">
   <div class="container">
     <figure class="project-hero-fig">
-      <img
-        src="/images/IMG_0036.JPG"
+      <Image
+        src={img0036}
         alt="Kitchen remodel Maui by Great General LLC — cherry wood cabinets and granite countertops"
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        width="1200"
-        height="480"
+        width={1200}
+        height={480}
+        format="webp"
+        quality={80}
       />
     </figure>
   </div>
@@ -162,101 +174,119 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
     <div class="gallery-grid">
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0036.JPG"
+        <Image
+          src={img0036}
           alt="Kitchen remodel Maui by Great General LLC — cherry wood cabinets and granite countertops"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Kitchen Remodel · Granite countertops, cherry cabinetry &amp; stainless appliances</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0037.JPG"
+        <Image
+          src={img0037}
           alt="Kitchen remodel Maui — open plan with breakfast bar peninsula and pendant lighting"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Kitchen Open Plan · Breakfast bar peninsula with pendant lighting</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0038.JPG"
+        <Image
+          src={img0038}
           alt="Living room remodel Maui — vaulted ceilings, LVP flooring and open indoor-outdoor flow"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Living Room · Vaulted ceilings, LVP flooring &amp; open indoor-outdoor flow</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0039.JPG"
+        <Image
+          src={img0039}
           alt="Bedroom remodel Maui — vaulted ceiling, new LVP flooring and sliding glass to garden balcony"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Master Bedroom · Vaulted ceiling, new LVP flooring &amp; garden balcony views</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0040.JPG"
+        <Image
+          src={img0040}
           alt="Bathroom renovation Maui — walk-in tile shower, granite vanity and backlit mirror"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Bathroom Renovation · Large-format tile shower, granite vanity &amp; backlit mirror</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0041.JPG"
+        <Image
+          src={img0041}
           alt="Interior remodel Maui — laundry buildout with stacked LG units and LVP flooring"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Laundry Buildout · Stacked LG units, new LVP flooring throughout</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0042.JPG"
+        <Image
+          src={img0042}
           alt="Bathroom renovation Kihei Maui — full tile shower with frameless glass door and granite countertop"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Second Bathroom · Full tile shower, granite countertop &amp; frameless glass door</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0043.JPG"
+        <Image
+          src={img0043}
           alt="Interior remodel Maui — bonus room with new LVP flooring and vaulted ceiling"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Bonus Room / Flex Space · New LVP flooring &amp; vaulted ceiling</figcaption>
       </figure>
       <figure class="photo-card">
-        <img
-          src="/images/IMG_0045.JPG"
+        <Image
+          src={img0045}
           alt="Kitchen to living room open plan remodel Maui by Great General LLC — granite counters and vaulted ceilings"
           loading="lazy"
           decoding="async"
-          width="800"
-          height="600"
+          width={800}
+          height={600}
+          format="webp"
+          quality={80}
         />
         <figcaption>Kitchen to Living Room · Open plan flow, granite counters &amp; vaulted ceilings</figcaption>
       </figure>

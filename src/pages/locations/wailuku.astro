@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import img0039 from '../../assets/images/IMG_0039.JPG';
 ---
 
 <BaseLayout
@@ -24,14 +26,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 <section class="section section--white">
   <div class="container">
     <figure class="project-hero-fig">
-      <img
-        src="/images/IMG_0039.JPG"
+      <Image
+        src={img0039}
         alt="Interior remodel Wailuku Maui — bedroom renovation by Great General LLC"
         loading="eager"
         fetchpriority="high"
         decoding="async"
-        width="1200"
-        height="480"
+        width={1200}
+        height={480}
+        format="webp"
+        quality={80}
       />
       <figcaption>Interior remodel — Wailuku, Central Maui</figcaption>
     </figure>
