@@ -1,5 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Great General LLC",
+  "url": "https://www.greatgeneral.com",
+  "telephone": "+18087954044",
+  "email": "noel@greatgeneral.com",
+  "description": "Hawaii DCCA B Licensed general contractor serving all of Maui. General contracting, interior remodeling, metal fabrication, and quonset hut construction. Free on-site estimates.",
+  "areaServed": ["Kihei", "Wailea", "Lahaina", "Wailuku", "Kahului", "Paia", "Maui"],
+  "serviceType": ["General Contracting", "Interior Remodeling", "Metal Fabrication", "Quonset Hut Construction"],
+  "hasCredential": "Hawaii DCCA General Building Contractor B License",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kahului",
+    "addressRegion": "HI",
+    "addressCountry": "US"
+  }
+});
 ---
 
 <BaseLayout
@@ -7,6 +27,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Great General LLC is a Hawaii DCCA licensed general contractor serving all of Maui. General contracting, interior remodeling, and metal fabrication. Free on-site estimates. Call (808) 795-4044."
   canonical="/"
 >
+  <link rel="preload" as="image" href="/images/metal-fab-hero.jpg" slot="head" />
+  <script type="application/ld+json" slot="head" set:html={pageSchema}></script>
 
 <!-- ── Hero ── -->
 <section class="hero">
@@ -43,7 +65,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="grid-2">
       <div class="card service-card">
         <figure class="service-card-photo">
-          <img src="/images/gc-project-1.jpg" alt="General contracting project Maui by Great General LLC" loading="lazy" width="800" height="600" />
+          <img src="/images/gc-project-1.jpg" alt="General contracting project Maui by Great General LLC" loading="lazy" decoding="async" width="800" height="600" />
         </figure>
         <div class="service-card-body">
           <h3>General Contracting</h3>
@@ -54,13 +76,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Residential, condo &amp; vacation rental projects</li>
             <li>Free on-site estimates</li>
           </ul>
-          <a href="/services/general-contracting" class="service-link">Learn more</a>
+          <a href="/services/general-contracting" class="service-link">Learn about General Contracting</a>
         </div>
       </div>
 
       <div class="card service-card">
         <figure class="service-card-photo">
-          <img src="/images/IMG_0036.JPG" alt="Kitchen remodel Maui by Great General LLC" loading="lazy" width="800" height="600" />
+          <img src="/images/IMG_0036.JPG" alt="Kitchen remodel Maui by Great General LLC" loading="lazy" decoding="async" width="800" height="600" />
         </figure>
         <div class="service-card-body">
           <h3>Interior Remodeling</h3>
@@ -71,13 +93,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Drywall installation &amp; finishing</li>
             <li>Flooring &amp; custom millwork</li>
           </ul>
-          <a href="/services/interior-remodeling" class="service-link">Learn more</a>
+          <a href="/services/interior-remodeling" class="service-link">Learn about Interior Remodeling</a>
         </div>
       </div>
 
       <div class="card service-card">
         <figure class="service-card-photo">
-          <img src="/images/metal-fab-railing-1.jpg" alt="Custom metal railing Maui by Great General LLC" loading="lazy" width="800" height="600" />
+          <img src="/images/metal-fab-railing-1.jpg" alt="Custom metal railing Maui by Great General LLC" loading="lazy" decoding="async" width="800" height="600" />
         </figure>
         <div class="service-card-body">
           <h3>Metal Fabrication</h3>
@@ -88,13 +110,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Architectural metal installations</li>
             <li>Coastal salt-air rated materials</li>
           </ul>
-          <a href="/services/metal-fabrication" class="service-link">Learn more</a>
+          <a href="/services/metal-fabrication" class="service-link">Learn about Metal Fabrication</a>
         </div>
       </div>
 
       <div class="card service-card">
         <figure class="service-card-photo">
-          <img src="/images/quonset-hut-maui.jpeg" alt="Quonset hut construction Maui by Great General LLC" loading="lazy" width="800" height="600" />
+          <img src="/images/quonset-hut-maui.jpeg" alt="Quonset hut construction Maui by Great General LLC" loading="lazy" decoding="async" width="800" height="600" />
         </figure>
         <div class="service-card-body">
           <h3>Quonset Hut Construction</h3>
@@ -105,7 +127,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Engineered for Hawaii wind &amp; rain</li>
             <li>Maui County permit handling</li>
           </ul>
-          <a href="/services/quonset-hut-hawaii" class="service-link">Learn more</a>
+          <a href="/services/quonset-hut-hawaii" class="service-link">Learn about Quonset Hut Construction</a>
         </div>
       </div>
     </div>
@@ -194,6 +216,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           src="/images/metal-fab-railing-2.jpg"
           alt="Custom stainless steel oceanfront railing Maui by Great General LLC"
           loading="lazy"
+          decoding="async"
           width="800"
           height="600"
         />
@@ -204,6 +227,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           src="/images/metal-fab-fence-2.jpg"
           alt="Custom metal and wood privacy fence Maui by Great General LLC"
           loading="lazy"
+          decoding="async"
           width="800"
           height="600"
         />
@@ -255,6 +279,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           src="/images/metal-fab-railing-1.jpg"
           alt="Custom stainless steel railing Maui by Great General LLC"
           loading="lazy"
+          decoding="async"
           width="800"
           height="600"
         />
@@ -265,6 +290,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           src="/images/metal-fab-gate-1.jpg"
           alt="Custom metal gate with wood panels Maui by Great General LLC"
           loading="lazy"
+          decoding="async"
           width="800"
           height="600"
         />
@@ -275,6 +301,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           src="/images/metal-fab-fence-1.jpg"
           alt="Custom metal and wood privacy fence Maui by Great General LLC"
           loading="lazy"
+          decoding="async"
           width="800"
           height="600"
         />
@@ -285,6 +312,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           src="/images/gc-project-1.jpg"
           alt="General contractor Maui luxury oceanfront construction by Great General LLC"
           loading="lazy"
+          decoding="async"
           width="800"
           height="600"
         />
@@ -295,6 +323,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           src="/images/metal-fab-roof.jpg"
           alt="Metal roof fabrication Maui by Great General LLC"
           loading="lazy"
+          decoding="async"
           width="800"
           height="600"
         />
@@ -305,6 +334,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           src="/images/IMG_0036.JPG"
           alt="Kitchen remodel Maui by Great General LLC — cherry wood cabinets and granite countertops"
           loading="lazy"
+          decoding="async"
           width="800"
           height="600"
         />

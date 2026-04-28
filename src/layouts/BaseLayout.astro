@@ -102,6 +102,8 @@ const schema = {
 
   <!-- Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <slot name="head" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
