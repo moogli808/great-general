@@ -30,15 +30,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <form
         name="contact"
         method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        action="/contact-success"
+        action="https://formspree.io/f/xlgaynjo"
         class="contact-form"
       >
-        <input type="hidden" name="form-name" value="contact" />
-        <p class="hidden" aria-hidden="true">
-          <label>Don't fill this out: <input name="bot-field" tabindex="-1" /></label>
-        </p>
+        <input type="hidden" name="_next" value="https://www.greatgeneral.com/contact-success" />
 
         <div class="form-row">
           <div class="form-group">
